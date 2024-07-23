@@ -16,7 +16,7 @@ export function uploads(
       },
       (error: UploadApiErrorResponse | undefined, result: UploadApiResponse | undefined) => {
         if (error) resolve(error);
-        resolve(error);
+        resolve(result);
       }
     );
   });

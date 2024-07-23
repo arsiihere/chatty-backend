@@ -13,6 +13,7 @@ class Config {
   public CLOUD_NAME: string | undefined;
   public CLOUD_API_KEY: string | undefined;
   public CLOUD_API_SECRET: string | undefined;
+  public REDIS_HOST: string | undefined;
 
   public CLIENT_URL: string | undefined;
   private readonly DEFAULT_DATABASE_URL = 'mongodb://localhost:27017/chattyapp-backend';
@@ -27,6 +28,7 @@ class Config {
     this.CLOUD_NAME = process.env.CLOUD_NAME || '';
     this.CLOUD_API_KEY = process.env.CLOUD_API_KEY || '';
     this.CLOUD_API_SECRET = process.env.CLOUD_API_SECRET || '';
+    this.REDIS_HOST = process.env.REDIS_HOST || '';
   }
 
   public createLogger(name: string): bunyan {
