@@ -11,6 +11,7 @@ import HTTP_STATUS from 'http-status-codes';
 export class SignIn {
   @joiValidation(loginSchema)
   public async read(req: Request, res: Response): Promise<void> {
+    console.log('this is hitting');
     const { username, password } = req.body;
 
     const existingUser: IAuthDocument = await authService.getAuthUserByUsername(username);

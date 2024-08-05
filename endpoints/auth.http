@@ -27,3 +27,16 @@ withCredentials: true
   "username":"happy2",
   "password":"arslan",
 }
+
+###
+GET {{baseUrl}}/{{urlPath}}/signout
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+GET {{baseUrl}}/{{urlPath}}/currentuser
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
